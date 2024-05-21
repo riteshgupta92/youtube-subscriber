@@ -1,0 +1,11 @@
+{
+  "name": "youtube-subscriber",
+  "version": "1.0.0",
+  "description": "javascript backend project for retriving all youtube subscribers",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vivek pathak",
+  "license": "ISC"
+}
