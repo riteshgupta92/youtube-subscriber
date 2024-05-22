@@ -1,6 +1,6 @@
 # Youtube-Subscribers
 
-This project is a javascript backend application that provides APIs for managing YouTube subscibers
+This project is a javascript backend application that provides APIs for managing YouTube subscribers
 
 The APIs provided by this application include the following:
 
@@ -51,7 +51,7 @@ https://github.com/vivekpathak4543/youtube-subscriber.git```
  npm install
 ````
 
-3. Create a .env file and add monogodb uri
+3. Create a .env file and add monogodb url
 
 4. Create a database:
 
