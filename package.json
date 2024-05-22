@@ -5,7 +5,7 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha '__tests__/*.js' --reporter mochawesome --recursive  --timeout 60000 --exit",
     "dev": "nodemon -r dotenv/config --experimental-json-modules src/server.js"
   },
   "keywords": [
@@ -19,6 +19,9 @@
     "mongoose": "^8.4.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.0",
+    "mocha": "^10.4.0",
+    "chai": "^5.1.1",
+    "chai-http": "^4.4.0"
   }
 }
