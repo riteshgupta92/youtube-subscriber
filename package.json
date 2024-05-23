@@ -2,10 +2,11 @@
   "name": "youtube-subscriber",
   "version": "1.0.0",
   "description": "javascript backend project for retrieving all youtube subscribers",
-  "main": "server.js",
+  "main": "src/server.js",
   "type": "module",
   "scripts": {
-    "test": "mocha '__tests__/*.js' --reporter mochawesome --recursive  --timeout 60000 --exit",
+    "test": " mocha '__tests__/*.js' --reporter mochawesome --recursive  --timeout 60000 --exit",
+    "start": "node src/server.js",
     "dev": "nodemon -r dotenv/config --experimental-json-modules src/server.js"
   },
   "keywords": [

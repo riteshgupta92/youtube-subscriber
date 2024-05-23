@@ -3,7 +3,6 @@ import { Subscriber } from "../model/subscriber.model.js";
 const getAllSubscribers = async (req, res) => {
   try {
     const subscriber = await Subscriber.find();
-    console.log("Subscribers Names:", subscriber);
     if (subscriber.length > 0) {
       res.status(200).json(subscriber);
     } else {
