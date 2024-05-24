@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import router from "./route/subscriber.route.js";
 import swaggerUi from "swagger-ui-express";
-import swaggerSpec from "swagger";
+import swaggerSpec from "./swagger.js";
 
 //load environment variables
 dotenv.config();
