@@ -12,11 +12,6 @@ dotenv.config();
 // Initialize express application
 const app = express();
 
-// Hello World
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
-
 // Generate Swagger specification
 const swaggerSpec = swaggerJsdoc(swaggerOptions);
 
