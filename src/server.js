@@ -34,7 +34,7 @@ const connectDB = async () => {
   }
 };
 (async () => {
-  connectDB();
+  await connectDB();
 })();
 
 // Get the port from environment variables or use 8000 as a default
