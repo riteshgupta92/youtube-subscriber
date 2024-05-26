@@ -109,6 +109,7 @@ const options = {
               name: "id",
               required: true,
               description: "Subscriber ID",
+
               schema: {
                 type: "string",
               },

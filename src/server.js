@@ -12,12 +12,19 @@ dotenv.config();
 // Initialize express application
 const app = express();
 
+// Hello World
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
 // Generate Swagger specification
 const swaggerSpec = swaggerJsdoc(swaggerOptions);
 
 //Parse JSON bodies that API clients send. using middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+// Use router for subscribers endpoint
 app.use("/subscribers", router);
 
 // Serve the Swagger UI
