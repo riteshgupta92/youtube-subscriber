@@ -12,10 +12,7 @@ const DATABASE_URL =
 const connectDB = async () => {
   try {
     // Attempt to connect to the MongoDB database
-    await mongoose.connect(DATABASE_URL, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect(DATABASE_URL);
     console.log("Database connection successful. Database created...");
   } catch (error) {
     console.error("Database connection error:", error);
