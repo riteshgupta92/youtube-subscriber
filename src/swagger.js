@@ -133,7 +133,7 @@ const options = {
       },
     },
   },
-  apis: ["./route/*.js"],
+  apis: ["./route/subscriber.route.js"],
 };
 
 export default options;
