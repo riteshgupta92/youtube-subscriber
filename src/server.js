@@ -3,13 +3,17 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import router from "./route/subscriber.route.js";
 import swaggerUi from "swagger-ui-express";
-import swaggerSpec from "./swagger.js";
+import swaggerJsdoc from "swagger-jsdoc";
+import swaggerOptions from "./swagger.js";
 
 //load environment variables
 dotenv.config();
 
 // Initialize express application
 const app = express();
+
+// Generate Swagger specification
+const swaggerSpec = swaggerJsdoc(swaggerOptions);
 
 //Parse JSON bodies that API clients send. using middleware
 app.use(express.json());
