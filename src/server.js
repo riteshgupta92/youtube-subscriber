@@ -5,7 +5,6 @@ import router from "./route/subscriber.route.js";
 import swaggerUi from "swagger-ui-express";
 import swaggerJsdoc from "swagger-jsdoc";
 import swaggerOptions from "./swagger.js";
-import cors from "cors";
 
 //load environment variables
 dotenv.config();
@@ -19,7 +18,6 @@ const swaggerSpec = swaggerJsdoc(swaggerOptions);
 //Parse JSON bodies that API clients send. using middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cors());
 
 // Use router for subscribers endpoint
 app.use("/subscribers", router);
