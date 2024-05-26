@@ -6,13 +6,12 @@ import data from "./data.js";
 dotenv.config();
 
 //connect to database
-const DATABASE_URL =
-  process.env.DATABASE_URL || "mongodb://127.0.0.1:27017/subscribers";
+const DATABASE_URI = process.env.DATABASE_URI;
 
 const connectDB = async () => {
   try {
     // Attempt to connect to the MongoDB database
-    await mongoose.connect(DATABASE_URL);
+    await mongoose.connect(DATABASE_URI);
     console.log("Database connection successful. Database created...");
   } catch (error) {
     console.error("Database connection error:", error);
