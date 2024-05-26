@@ -11,7 +11,7 @@ const options = {
     },
     servers: [
       {
-        url: "https://youtube-subscriber-beta.vercel.app/",
+        url: "https://youtube-subscriber-eight.vercel.app/",
         description: "Deployment server",
       },
     ],
