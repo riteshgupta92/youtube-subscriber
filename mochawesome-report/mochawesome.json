@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2024-05-23T15:02:29.293Z",
-    "end": "2024-05-23T15:02:30.482Z",
-    "duration": 1189,
+    "start": "2024-05-26T04:44:45.018Z",
+    "end": "2024-05-26T04:44:46.799Z",
+    "duration": 1781,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "d186cbc4-c522-4500-9f79-96461dd12bf5",
+      "uuid": "63b11001-df60-4862-8356-06cdfd5a2f42",
       "title": "",
       "fullFile": "F:\\vivek\\youtube-subscriber\\__tests__\\subscriber.test.js",
       "file": "\\__tests__\\subscriber.test.js",
@@ -27,7 +27,7 @@
           "title": "\"before all\" hook in \"{root}\"",
           "fullTitle": "\"before all\" hook in \"{root}\"",
           "timedOut": false,
-          "duration": 1016,
+          "duration": 1014,
           "state": null,
           "speed": null,
           "pass": false,
@@ -36,8 +36,8 @@
           "context": null,
           "code": "// Wait 1 second for the database to connect successfully\nsetTimeout(done, 1000);",
           "err": {},
-          "uuid": "e9df71dd-ae1b-49b8-82b8-585abf46902a",
-          "parentUUID": "d186cbc4-c522-4500-9f79-96461dd12bf5",
+          "uuid": "11e54104-9a61-4955-a209-3176f3be61b6",
+          "parentUUID": "63b11001-df60-4862-8356-06cdfd5a2f42",
           "isHook": true,
           "skipped": false
         }
@@ -47,7 +47,7 @@
           "title": "\"after all\" hook in \"{root}\"",
           "fullTitle": "\"after all\" hook in \"{root}\"",
           "timedOut": false,
-          "duration": 7,
+          "duration": 11,
           "state": null,
           "speed": null,
           "pass": false,
@@ -56,8 +56,8 @@
           "context": null,
           "code": "await mongoose.connection.close();",
           "err": {},
-          "uuid": "d772b9b6-2fd4-45d3-bf90-5b395755ef0e",
-          "parentUUID": "d186cbc4-c522-4500-9f79-96461dd12bf5",
+          "uuid": "d54907db-bce2-4736-904e-f83738df28fe",
+          "parentUUID": "63b11001-df60-4862-8356-06cdfd5a2f42",
           "isHook": true,
           "skipped": false
         }
@@ -65,7 +65,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "5f9e3b2c-66c9-4b10-8d18-efa0e504a6ac",
+          "uuid": "17ce1123-8b7d-4525-bcbc-ad9907fb6262",
           "title": "Subscribers API Tests",
           "fullFile": "F:\\vivek\\youtube-subscriber\\__tests__\\subscriber.test.js",
           "file": "\\__tests__\\subscriber.test.js",
@@ -74,7 +74,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "ad544e68-c62d-4542-85da-c65c96db5f36",
+              "uuid": "28291a94-f3ca-40d1-8bdb-decb291d2484",
               "title": "GET /subscribers",
               "fullFile": "F:\\vivek\\youtube-subscriber\\__tests__\\subscriber.test.js",
               "file": "\\__tests__\\subscriber.test.js",
@@ -85,7 +85,7 @@
                   "title": "should return all subscribers",
                   "fullTitle": "Subscribers API Tests GET /subscribers should return all subscribers",
                   "timedOut": false,
-                  "duration": 92,
+                  "duration": 607,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -94,26 +94,26 @@
                   "context": null,
                   "code": "const res = await chai.request(app).get(\"/subscribers\");\nexpect(res).to.have.status(200);\nexpect(res.body).to.be.an(\"array\");\nexpect(res.body).to.have.lengthOf.at.least(1);\nexpect(res.body[0]).to.have.property(\"_id\").that.is.a(\"string\");\nexpect(res.body[0]).to.have.property(\"name\").that.is.a(\"string\");\nexpect(res.body[0])\n  .to.have.property(\"subscribedChannel\")\n  .that.is.a(\"string\");\nexpect(res.body[0])\n  .to.have.property(\"subscribedDate\")\n  .that.is.a(\"string\")\n  .and.matches(/\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}.\\d{3}Z/);",
                   "err": {},
-                  "uuid": "4e4ef34a-5614-450f-9c60-2e0f01a47e42",
-                  "parentUUID": "ad544e68-c62d-4542-85da-c65c96db5f36",
+                  "uuid": "aac2b42b-9b3b-4a74-8269-d4583305e63e",
+                  "parentUUID": "28291a94-f3ca-40d1-8bdb-decb291d2484",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "4e4ef34a-5614-450f-9c60-2e0f01a47e42"
+                "aac2b42b-9b3b-4a74-8269-d4583305e63e"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 92,
+              "duration": 607,
               "root": false,
               "rootEmpty": false,
               "_timeout": 60000
             },
             {
-              "uuid": "0105bd72-5d48-4e0b-b52d-d986a7d64dc8",
+              "uuid": "b71eb258-5f54-4aa8-8ec5-1cd4ba55cc1f",
               "title": "GET /subscribers/names",
               "fullFile": "F:\\vivek\\youtube-subscriber\\__tests__\\subscriber.test.js",
               "file": "\\__tests__\\subscriber.test.js",
@@ -124,7 +124,7 @@
                   "title": "should return subscriber names and channels",
                   "fullTitle": "Subscribers API Tests GET /subscribers/names should return subscriber names and channels",
                   "timedOut": false,
-                  "duration": 16,
+                  "duration": 26,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -133,26 +133,26 @@
                   "context": null,
                   "code": "const res = await chai.request(app).get(\"/subscribers/names\");\nexpect(res).to.have.status(200);\nexpect(res.body).to.be.an(\"array\");\nexpect(res.body).to.have.lengthOf.at.least(1);\nexpect(res.body[0]).to.have.property(\"name\").that.is.a(\"string\");\nexpect(res.body[0])\n  .to.have.property(\"subscribedChannel\")\n  .that.is.a(\"string\");",
                   "err": {},
-                  "uuid": "bde90615-64eb-4e88-b5b6-29172e94a9bb",
-                  "parentUUID": "0105bd72-5d48-4e0b-b52d-d986a7d64dc8",
+                  "uuid": "36bbc432-b920-49d8-824f-6ab0f701669f",
+                  "parentUUID": "b71eb258-5f54-4aa8-8ec5-1cd4ba55cc1f",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "bde90615-64eb-4e88-b5b6-29172e94a9bb"
+                "36bbc432-b920-49d8-824f-6ab0f701669f"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 16,
+              "duration": 26,
               "root": false,
               "rootEmpty": false,
               "_timeout": 60000
             },
             {
-              "uuid": "9b76af36-388f-41f9-b514-a0b3323b966c",
+              "uuid": "6ab6fa03-e81d-4535-a9b6-e3734a40efa8",
               "title": "GET /subscribers/{id}",
               "fullFile": "F:\\vivek\\youtube-subscriber\\__tests__\\subscriber.test.js",
               "file": "\\__tests__\\subscriber.test.js",
@@ -163,7 +163,7 @@
                   "title": "should return a single subscriber by ID",
                   "fullTitle": "Subscribers API Tests GET /subscribers/{id} should return a single subscriber by ID",
                   "timedOut": false,
-                  "duration": 19,
+                  "duration": 17,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -172,20 +172,20 @@
                   "context": null,
                   "code": "const subscriberId = \"664d7fcb247d94b0293576cb\";\nconst res = await chai.request(app).get(`/subscribers/${subscriberId}`);\nexpect(res).to.have.status(200);\nexpect(res.body).to.be.an(\"object\");\nexpect(res.body).to.have.property(\"_id\", subscriberId);\nexpect(res.body).to.have.property(\"name\").that.is.a(\"string\");\nexpect(res.body)\n  .to.have.property(\"subscribedChannel\")\n  .that.is.a(\"string\");\nexpect(res.body)\n  .to.have.property(\"subscribedDate\")\n  .that.is.a(\"string\")\n  .and.matches(/\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}.\\d{3}Z/);",
                   "err": {},
-                  "uuid": "1aaebe25-2128-48ee-b545-33031306699f",
-                  "parentUUID": "9b76af36-388f-41f9-b514-a0b3323b966c",
+                  "uuid": "bbb8801f-3cc9-4f64-bf91-978560dd3ae2",
+                  "parentUUID": "6ab6fa03-e81d-4535-a9b6-e3734a40efa8",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "1aaebe25-2128-48ee-b545-33031306699f"
+                "bbb8801f-3cc9-4f64-bf91-978560dd3ae2"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 19,
+              "duration": 17,
               "root": false,
               "rootEmpty": false,
               "_timeout": 60000
