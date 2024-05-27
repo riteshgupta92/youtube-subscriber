@@ -4,7 +4,8 @@ import dotenv from "dotenv";
 import router from "./route/subscriber.route.js";
 import swaggerUi from "swagger-ui-express";
 import swaggerJsdoc from "swagger-jsdoc";
-import swaggerOptions from "./swagger.js";
+import { options } from "./swagger.js";
+import bodyParser from "body-parser";
 
 //load environment variables
 dotenv.config();
@@ -13,11 +14,12 @@ dotenv.config();
 const app = express();
 
 // Generate Swagger specification
-const swaggerSpec = swaggerJsdoc(swaggerOptions);
+const swaggerSpec = swaggerJsdoc(options);
 
 //Parse JSON bodies that API clients send. using middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 // Use router for subscribers endpoint
 app.use("/subscribers", router);

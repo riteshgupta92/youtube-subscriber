@@ -1,4 +1,4 @@
-import swaggerJsdoc from "swagger-jsdoc";
+import swaggerJSDoc from "swagger-jsdoc";
 
 const options = {
   definition: {
@@ -134,7 +134,7 @@ const options = {
       },
     },
   },
-  apis: ["./route/subscriber.route.js"],
+  apis: ["./route/*"],
 };
 
-export default options;
+export { options };
