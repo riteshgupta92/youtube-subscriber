@@ -16,9 +16,6 @@ dotenv.config();
 // Initialize express application
 const app = express();
 
-// Generate Swagger specification
-const swaggerSpec = swaggerJsdoc(options);
-
 //Parse JSON bodies that API clients send. using middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
