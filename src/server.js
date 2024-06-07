@@ -6,6 +6,7 @@ import swaggerUi from "swagger-ui-express";
 import swaggerJsdoc from "swagger-jsdoc";
 import { options } from "./swagger.js";
 import bodyParser from "body-parser";
+import path from "path";
 
 //load environment variables
 dotenv.config();
