@@ -7,6 +7,7 @@ import swaggerJsdoc from "swagger-jsdoc";
 import { options } from "./swagger.js";
 import bodyParser from "body-parser";
 import path from "path";
+import { fileURLToPath } from "url";
 
 //load environment variables
 dotenv.config();
@@ -22,6 +23,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+// Define __dirname in ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 //Home route
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "/index.html"));
