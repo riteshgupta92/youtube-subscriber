@@ -7,6 +7,8 @@ import {
 
 const router = Router();
 
+//routes
+
 router.route("/").get(getAllSubscribers);
 router.route("/names").get(getSubscribersNames);
 router.route("/:id").get(getSubscriberById);
