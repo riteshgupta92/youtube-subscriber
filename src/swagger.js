@@ -1,4 +1,5 @@
 import swaggerJsdoc from "swagger-jsdoc";
+import SwaggerUIBundle from "swagger-ui-dist";
 
 const options = {
   definition: {
