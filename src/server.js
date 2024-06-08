@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 import router from "./route/subscriber.route.js";
 import swaggerUi from "swagger-ui-express";
 import swaggerSpec from "./swagger.js";
-import bodyParser from "body-parser";
+// import bodyParser from "body-parser";
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -15,9 +15,9 @@ dotenv.config();
 const app = express();
 
 //Parse JSON bodies that API clients send. using middleware
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+// app.use(express.json());
+// app.use(express.urlencoded({ extended: false }));
+// app.use(bodyParser.json());
 
 // Define __dirname in ES modules
 const __filename = fileURLToPath(import.meta.url);
