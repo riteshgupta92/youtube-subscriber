@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import router from "./route/subscriber.route.js";
 import swaggerUi from "swagger-ui-express";
-import swaggerSpec from "./swagger";
+import swaggerSpec from "./swagger.js";
 import bodyParser from "body-parser";
 import path from "path";
 import { fileURLToPath } from "url";
