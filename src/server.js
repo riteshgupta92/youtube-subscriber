@@ -2,8 +2,6 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import router from "./route/subscriber.route.js";
-import swaggerUi from "swagger-ui-express";
-import swaggerSpec from "./swagger.js";
 import bodyParser from "body-parser";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -29,9 +27,6 @@ app.get("/", (req, res) => {
 
 // Use router for subscribers endpoint
 app.use("/subscribers", router);
-
-// Serve the Swagger UI
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 const connectDB = async () => {
   try {
